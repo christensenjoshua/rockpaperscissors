@@ -61,5 +61,16 @@ function updateScreen(){
     playerScoreElement.innerText = playerScore
     computerScoreElement.innerText = computerScore
     resultElement.innerText = gameResult
-    
-}
+        if(playerScore >= 10){
+            if(computerScore == playerScore){
+                alert("Congratulations! You both win!! (kindof)")
+                playAgain()
+            }else{
+                alert("Congratulations, you win!!!")
+                playAgain()
+            }
+        }else if(computerScore >= 10){
+            alert("Sorry, your opponent bested you!")
+            playAgain()
+        }
+    }
