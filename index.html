@@ -8,23 +8,25 @@
     <title>Play Rock Paper Scissors!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-        <div class="col-12 text-center">
-        <h1>Play the Rock Paper Scissors Game!</h1>
-        <h2>The first player to 10 points wins a fancy alert() box!</h2>
-        <button class="btn btn-primary" onclick="play('rock')">Rock</button>
-        <button class="btn btn-primary" onclick="play('paper')">Paper</button>
-        <button class="btn btn-primary" onclick="play('scissors')">Scissors</button>
+        <div class="jumbotron">
+            <h1>Play the Rock Paper Scissors Game!</h1>
+            <h2>The first player to 10 points wins a fancy alert() box!</h2>
+            <hr>
+            <h4>Choose your seemingly harmless object...</h4>
+            <button class="btn btn-primary" onclick="play('rock')">Rock</button>
+            <button class="btn btn-primary" onclick="play('paper')">Paper</button>
+            <button class="btn btn-primary" onclick="play('scissors')">Scissors</button>
         </div>
-        
+        <div class="row">      
         <div class="col-12 text-center">
-        <h3>Your Result Is...</h3>
-        <p id="gameResult"></p>
-        <h3>Scoreboard:</h3>
+        <h3 class="my-h3">Your Result Is...</h3>
+        <p class ="importantParagraph" id="gameResult"></p>
+        <h3 class="my-h3">Scoreboard:</h3>
         <h4>Your Score:
             <span id="playerScore"></span>
         </h4>
@@ -33,7 +35,7 @@
         </h4>
         </div>
         <div class="col-12 text-center">
-        <h3>Total Wins:</h3>
+        <h3 class="my-h3">Total Wins:</h3>
         <h4>Your Wins:
             <span id="playerWins"></span>
         </h4>
@@ -42,8 +44,8 @@
         </h4>
         </div>
         <div class="col-12 text-center">
-        <button class="btn btn-info" onclick="playAgain(true)">Play Again?</button>
-        <p>*You will lose all scoring counts!</p>
+        <button class="btn btn-info" onclick="playAgain(true)">Play Again? *</button>
+        <p class="importantParagraph">*You will lose all scoring counts!</p>
         </div>
     </div>
     </div>

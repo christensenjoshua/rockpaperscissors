@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(to bottom right,  #e9ecef ,#ffffff);
+}
+
+.importantParagraph{
+    color:red;
+}
+.my-h3 {
+    padding-top:1rem;
+}
