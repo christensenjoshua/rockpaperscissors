@@ -4,10 +4,10 @@ var playerScore = 0
 var computerScore = 0
 var playerScoreElement = document.getElementById("playerScore")
 var computerScoreElement = document.getElementById("computerScore")
+var gameResult = ''
 function play(choice) {
     var thisNumber = Math.floor(Math.random() * Math.floor(3))
     var thisChoice = computerChoices[thisNumber]
-    var gameResult = ''
     switch (choice) {
         case 'rock':
             if (thisChoice == 'rock') {
@@ -49,7 +49,17 @@ function play(choice) {
             computerScore++
             break;
     }
+    updateScreen()
+}
+function playAgain(){
+    playerScore = 0
+    computerScore = 0
+    gameResult = ''
+    updateScreen()
+}
+function updateScreen(){
     playerScoreElement.innerText = playerScore
     computerScoreElement.innerText = computerScore
-     resultElement.innerText = gameResult
+    resultElement.innerText = gameResult
+    
 }
