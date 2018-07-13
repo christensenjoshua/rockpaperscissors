@@ -1,37 +1,55 @@
 var computerChoices = ['rock', 'paper', 'scissors']
 var resultElement = document.getElementById("gameResult")
+var playerScore = 0
+var computerScore = 0
+var playerScoreElement = document.getElementById("playerScore")
+var computerScoreElement = document.getElementById("computerScore")
 function play(choice) {
-    var thisNumber = Math.floor(Math.random() * 3)
+    var thisNumber = Math.floor(Math.random() * Math.floor(3))
     var thisChoice = computerChoices[thisNumber]
     var gameResult = ''
     switch (choice) {
         case 'rock':
-            if (thisChoice = 'rock') {
+            if (thisChoice == 'rock') {
                 gameResult = 'Draw'
-            } else if (thisChoice = 'paper') {
+            } else if (thisChoice == 'paper') {
                 gameResult = 'Lose'
             } else {
                 gameResult = 'Win'
             }
-            break
+            break;
         case 'paper':
-            if (thisChoice = 'rock') {
+            if (thisChoice == 'rock') {
                 gameResult = 'Win'
-            } else if (thisChoice = 'paper') {
+            } else if (thisChoice == 'paper') {
                 gameResult = 'Draw'
             } else {
                 gameResult = 'Lose'
             }
-            break
+            break;
         case 'scissors':
-            if (thisChoice = 'rock') {
+            if (thisChoice == 'rock') {
                 gameResult = 'Lose'
-            } else if (thisChoice = 'paper') {
+            } else if (thisChoice == 'paper') {
                 gameResult = 'Win'
             } else {
                 gameResult = 'Draw'
             }
-            break
+            break;
     }
+    switch(gameResult){
+        case 'Win':
+            playerScore++
+            break;
+        case 'Lose':
+            computerScore++
+            break;
+        case 'Draw':
+            playerScore++
+            computerScore++
+            break;
+    }
+    playerScoreElement.innerText = playerScore
+    computerScoreElement.innerText = computerScore
      resultElement.innerText = gameResult
 }
